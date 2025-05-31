@@ -1,5 +1,15 @@
 #!/bin/zsh
 
+# Ejecutar los dos comandos:
+# chmod +x push_and_update.sh
+# ./push_and_update.sh "push automatically"
+
+# Verifica que se pase un mensaje de commit
+if [[ -z "$1" ]]; then
+  echo "Uso: $0 'mensaje de commit'"
+  exit 1
+fi
+
 # Verifica que se pase un mensaje de commit
 if [[ -z "$1" ]]; then
   echo "Uso: $0 'mensaje de commit'"
